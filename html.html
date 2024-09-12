@@ -1,0 +1,41 @@
+<!Doctype html>
+<html>
+<head>
+<title> coefficient conversion program</title>
+<h1 style="color: rgb(92, 43, 226);text-align: center;">Coefficient conversion program(from decimal to binary, positive integer only):</h1>
+</head>
+<style>
+    .nam{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+</style>
+    
+
+<script>
+    var converter=function(){
+    var  x=parseInt(document.getElementById("decimal").value)
+    var a = []
+    for(i=0;x!=0;i++){
+        a.push(x%2)
+        x=(x-(x%2))/2
+    }
+    a[-1]=[""]//hong biet fix;-;
+    document.write("Your binary number is: ")
+    while (i>=0){
+        document.write(a[i-1])
+        i=i-1}
+    }
+</script> 
+<div class="nam">
+    <label style="font-size: 25px;display: inline-block;width: 700px;text-align: center;" for="decimal">Type the decimal:</label><br>
+    <input style="height: 40px;width: 700px;text-align: center;" type="number" id="decimal" value><br>
+    <button onclick="converter()">convert</button>
+</div>
+<div>
+    
+</div>
+<body>
+</body>
+</html>
